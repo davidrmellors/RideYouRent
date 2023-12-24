@@ -1,0 +1,36 @@
+﻿@page
+@model CLDVPOE.Pages.Inspectors.IndexModel
+@{
+    Layout = "~/Pages/Shared/_dashboard.cshtml";
+}
+<div class="p-5">
+    <br />
+    <h2>List of Inspectors</h2>
+    <a class="btn btn-primary btn-sm" href="/Inspectors/Create">New Inspector</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>inspectorID</th>
+                <th>inspectorName</th>
+                <th>inspectorEmail</th>
+                <th>inspectorMobileNumber</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in IndexModel.listInspectors)
+            {
+                <tr>
+                    <td>@item.inspectorID</td>
+                    <td>@item.inspectorName</td>
+                    <td>@item.inspectorEmail</td>
+                    <td>@item.inspectorMobileNumber</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="/Inspectors/Edit?inspectorID=@item.inspectorID">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="/Inspectors/Delete?inspectorID=@item.inspectorID">Delete</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

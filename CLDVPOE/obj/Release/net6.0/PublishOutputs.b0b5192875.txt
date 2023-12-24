@@ -1,0 +1,13 @@
+C:\Users\Administrator\source\repos\CLDVPOE\CLDVPOE\obj\Release\net6.0\PubTmp\Out\CLDVPOE.exe
+C:\Users\Administrator\source\repos\CLDVPOE\CLDVPOE\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\Administrator\source\repos\CLDVPOE\CLDVPOE\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\Administrator\source\repos\CLDVPOE\CLDVPOE\obj\Release\net6.0\PubTmp\Out\CLDVPOE.dll
+C:\Users\Administrator\source\repos\CLDVPOE\CLDVPOE\obj\Release\net6.0\PubTmp\Out\CLDVPOE.deps.json
+C:\Users\Administrator\source\repos\CLDVPOE\CLDVPOE\obj\Release\net6.0\PubTmp\Out\CLDVPOE.runtimeconfig.json
+C:\Users\Administrator\source\repos\CLDVPOE\CLDVPOE\obj\Release\net6.0\PubTmp\Out\CLDVPOE.pdb
+C:\Users\Administrator\source\repos\CLDVPOE\CLDVPOE\obj\Release\net6.0\PubTmp\Out\System.Data.SqlClient.dll
+C:\Users\Administrator\source\repos\CLDVPOE\CLDVPOE\obj\Release\net6.0\PubTmp\Out\runtimes\win-arm64\native\sni.dll
+C:\Users\Administrator\source\repos\CLDVPOE\CLDVPOE\obj\Release\net6.0\PubTmp\Out\runtimes\win-x64\native\sni.dll
+C:\Users\Administrator\source\repos\CLDVPOE\CLDVPOE\obj\Release\net6.0\PubTmp\Out\runtimes\win-x86\native\sni.dll
+C:\Users\Administrator\source\repos\CLDVPOE\CLDVPOE\obj\Release\net6.0\PubTmp\Out\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Administrator\source\repos\CLDVPOE\CLDVPOE\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

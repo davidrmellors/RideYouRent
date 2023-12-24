@@ -1,0 +1,39 @@
+﻿@page
+@model CLDVPOE.Pages.Rentals.IndexModel
+@{
+    Layout = "~/Pages/Shared/_dashboard.cshtml";
+}
+<div class="p-5">
+    <br />
+    <h2>List of Rentals</h2>
+    <a class="btn btn-primary btn-sm" href="/Rentals/Create">New Rental</a>
+    <a class="btn btn-primary btn-sm" href="/Rentals/Retrieve">Retrieve Rental</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>rentalID</th>
+                <th>carID</th>
+                <th>inspectorID</th>
+                <th>driverID</th>
+                <th>rentalFee</th>
+                <th>startDate</th>
+                <th>endDate</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in IndexModel.listRentals)
+            {
+                <tr>
+                    <td>@item.rentalID</td>
+                    <td>@item.carID</td>
+                    <td>@item.inspectorID</td>
+                    <td>@item.driverID</td>
+                    <td>@item.rentalFee</td>
+                    <td>@item.startDate</td>
+                    <td>@item.endDate</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,27 @@
+﻿@page
+@using System.Data.SqlClient;
+@{ 
+    Layout = "~/Pages/Shared/_dashboard.cshtml";
+
+    try
+    {
+        string inspectorID = Request.Query["inspectorID"];
+        string connectionString = "Data Source=dbs-vc-cldv6221-st10241466.database.windows.net;Initial Catalog=db_vc_cldv6221_st10241466;Persist Security Info=True;User ID=st10241466;Password=Monster@$123";
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            string sql = "DELETE FROM Inspector WHERE inspectorID=@inspectorID";
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@inspectorID", inspectorID);
+                command.ExecuteNonQuery();
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+    }
+
+    Response.Redirect("/Inspectors/Index");
+}

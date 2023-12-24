@@ -1,0 +1,38 @@
+﻿@page
+@model CLDVPOE.Pages.Returns.IndexModel
+@{
+    Layout = "~/Pages/Shared/_dashboard.cshtml";
+}
+<div class="p-5">
+    <br />
+    <h2>List of Returns</h2>
+    <a class="btn btn-primary btn-sm" href="/Returns/Create">New Return</a>
+    <a class="btn btn-primary btn-sm" href="/Returns/Retrieve">Retrieve Return</a>
+    <a class="btn btn-primary btn-sm" href="/Returns/Penalty">Calculate Fine</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>returnID</th>
+                <th>rentalID</th>
+                <th>inspectorID</th>
+                <th>returnDate</th>
+                <th>elapsedDate</th>
+                <th>fine</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in IndexModel.listReturns)
+            {
+                <tr>
+                    <td>@item.returnID</td>
+                    <td>@item.rentalID</td>
+                    <td>@item.inspectorID</td>
+                    <td>@item.returnDate</td>
+                    <td>@item.elapsedDate</td>
+                    <td>@item.fine</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

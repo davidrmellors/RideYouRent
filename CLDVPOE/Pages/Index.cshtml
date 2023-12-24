@@ -1,0 +1,54 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div id="head" class="row m-0 container-fluid overflow-auto" style="height: 800px">
+    <section class="col-md-6 align-self-center mx-auto container-fluid" style="max-width: 500px;" aria-labelledby="gettingStartedTitle">
+        <h2 class="fw-bold text-center fs-1">EASY AND SECURE</h2>
+        <h2 class="fw-bold text-center fs-1" style="color: #0D7CFF;">CAR HIRE</h2>
+        <p class="text-center mt-5">
+            Welcome to Ride You Rent, a leading independent car rental company operating in South Africa
+        </p>
+        <a id="loginBtn" href="/Login" class="bg-light mt-5 rounded-2 border-0 text-center d-flex justify-content-center align-items-center text-decoration-none" style="width: 40%; height: 50px;margin: 0 auto;min-width: 50px;">
+            <span class="fw-bold fs-4" style="font-family: sans-serif; color: black">LOGIN</span>
+        </a>
+    </section>
+    <section class="col-md-6 d-flex justify-content-center mh-100" aria-labelledby="hostingTitle">
+        <img class="img-fluid obj-fit-contain" alt="cars" src="images/cars2.png" />
+    </section>
+</div>
+<div id="favourites" class="row container-fluid text-center fs-5">
+    <div style="margin: 20px auto 100px auto;">
+        <h1 id="customerFav" class="fw-bold text-center">OUR CUSTOMER <span style="color: #0D7CFF">FAVOURITES</span></h1>
+    </div>
+    <section class="col cars">
+        <img class="img-fluid obj-fit-contain rounded-3" style="border: 3px solid black;max-height: 250px;" src="/images/Fiesta.png" />
+        <p>
+            Everyone’s had a Fiesta, or knows someone who has, and there’s a good reason for that — the Fiesta was and is well-priced,
+            practical, frugal, and as a bonus is enormously good fun to drive. That goes equally for the basic 1.1 as for the hot 200hp ST.
+        </p>
+        <img class="img-fluid obj-fit-contain" src="~/images/fiestaRating.png" />
+    </section>
+    <section class="col cars">
+        <img class="img-fluid obj-fit-contain rounded-3" style="border: 3px solid black;max-height: 250px;" src="/images/Corolla.png" />
+        <p>
+            If engine performance and driving dynamism are what you desire in a car, you’ll love the all-new Corolla. 
+            The new Corolla truly has it all. Enjoy a more dynamic driving experience with a 2-litre petrol engine with the best 
+            handling to date or experience the new revolutionary efficient 1.8-litre hybrid engine. The all-new Corolla was born to deliver 
+            exceptional driving performance.
+        </p>
+        <img class="img-fluid obj-fit-contain" src="~/images/corollaRating.png" />
+    </section>
+    <section class="col cars">
+        <img class="img-fluid obj-fit-contain rounded-3" style="border: 3px solid black;max-height: 250px;" src="/images/Polo.png" />
+        <p>
+            The Polo has been a firm favourite for decades, and as soon as you sit behind the wheel you can see why. 
+            Or rather feel why - everything feels really well-made and substantial, and it’s as comfy and refined as a bigger Golf. 
+            Basic non-turbo engine is a bit sluggish, but the 95hp 1.0-litre TSI turbo is lively enough.
+        </p>
+        <img class="img-fluid obj-fit-contain" src="~/images/poloRating.png"/>
+    </section>
+</div>

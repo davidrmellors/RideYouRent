@@ -1,0 +1,85 @@
+﻿@page
+@model CLDVPOE.Pages.Rentals.RetrieveModel
+@{
+    Layout = "~/Pages/Shared/_dashboard.cshtml";
+}
+<div class="p-5">
+    <br>
+    <h2>Retrieve Rental</h2>
+
+    @if (Model.errorMessage.Length > 0)
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>@Model.errorMessage</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <form method="post">
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">RentalID</label>
+            <div class="col-sm-6">
+                <select class="form-select" name="rentalID">
+                    @foreach (var item in IndexModel.listRentals)
+                    {
+                        <option value="@item.rentalID">@item.rentalID</option>
+                    }
+                </select>
+            </div>
+        </div>
+        @if (Model.successMessage.Length > 0)
+        {
+            <div class="row mb-3">
+                <div class="col-sm-9">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>@Model.successMessage</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="row mb-3">
+            <div class="offset-sm-3 col-sm-3 d-grid">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="col-sm-3 d-grid">
+                <a class="btn btn-outline-primary" href="/Rentals/Index" role="button">Cancel</a>
+            </div>
+        </div>
+    </form>
+
+    @if (Model.FormSubmitted == true)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>rentalID</th>
+                    <th>carID</th>
+                    <th>inspectorID</th>
+                    <th>driverID</th>
+                    <th>rentalFee</th>
+                    <th>startDate</th>
+                    <th>endDate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.rentals.rentalID</td>
+                    <td>@Model.rentals.carID</td>
+                    <td>@Model.rentals.inspectorID</td>
+                    <td>@Model.rentals.driverID</td>
+                    <td>@Model.rentals.rentalFee</td>
+                    <td>@Model.rentals.startDate</td>
+                    <td>@Model.rentals.endDate</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row mb-3">
+            <div class="col-sm-3 d-grid">
+                <a class="btn btn-primary" href="/Rentals/Index">Done</a>
+            </div>
+        </div>
+    }
+    
+</div>

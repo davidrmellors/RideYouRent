@@ -1,0 +1,44 @@
+﻿@page
+@model CLDVPOE.Pages.Cars.IndexModel
+@{
+    Layout = "~/Pages/Shared/_dashboard.cshtml";
+}
+<div class="p-5">
+    <br />
+    <h2>List of Cars</h2>
+    <a class="btn btn-primary btn-sm" href="/Cars/Create">New Car</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>carID</th>
+                <th>makeID</th>
+                <th>bodyTypeID</th>
+                <th>carModel</th>
+                <th>kilometersTravelled</th>
+                <th>serviceKilometers</th>
+                <th>available</th>
+                <th>serviceDue</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in IndexModel.listCars)
+            {
+                <tr>
+                    <td>@item.carID</td>
+                    <td>@item.makeID</td>
+                    <td>@item.bodyTypeID</td>
+                    <td>@item.carModel</td>
+                    <td>@item.kilometersTravelled</td>
+                    <td>@item.serviceKilometers</td>
+                    <td>@item.available</td>
+                    <td>@item.serviceDue</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="/Cars/Edit?carID=@item.carID">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="/Cars/Delete?carID=@item.carID">Delete</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,38 @@
+﻿@page
+@model CLDVPOE.Pages.Drivers.IndexModel
+@{
+    Layout = "~/Pages/Shared/_dashboard.cshtml";
+}
+<div class="p-5">
+    <br />
+    <h2>List of Drivers</h2>
+    <a class="btn btn-primary btn-sm" href="/Drivers/Create">New Driver</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>driverID</th>
+                <th>driverName</th>
+                <th>driverAddress</th>
+                <th>driverEmail</th>
+                <th>driverMobileNumber</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in IndexModel.listDrivers)
+            {
+                <tr>
+                    <td>@item.driverID</td>
+                    <td>@item.driverName</td>
+                    <td>@item.driverAddress</td>
+                    <td>@item.driverEmail</td>
+                    <td>@item.driverMobileNumber</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="/Drivers/Edit?driverID=@item.driverID">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="/Drivers/Delete?driverID=@item.driverID">Delete</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

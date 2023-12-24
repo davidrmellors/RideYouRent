@@ -1,0 +1,67 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#head {
+    background-color: #142A3A;
+    color: white;
+}
+
+.obj-fit-contain {
+    object-fit: contain;
+}
+
+
+@media screen and (max-width: 600px) {
+    p {
+        font-size: 8px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+}
+
+.details {
+    width: 400px;
+    min-width: 200px;
+}
+
+.regAndLogSec {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.button {
+    font-weight: bold;
+    border-radius: 0.4rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 20px;
+}

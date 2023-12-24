@@ -1,0 +1,26 @@
+﻿@page
+@using System.Data.SqlClient;
+@{
+    Layout = "~/Pages/Shared/_dashboard.cshtml";
+    try
+    {
+        string carID = Request.Query["carID"];
+        string connectionString = "Data Source=dbs-vc-cldv6221-st10241466.database.windows.net;Initial Catalog=db_vc_cldv6221_st10241466;Persist Security Info=True;User ID=st10241466;Password=Monster@$123";
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            string sql = "DELETE FROM Car WHERE carID=@carID";
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@carID", carID);
+                command.ExecuteNonQuery();
+            }
+        }
+    }
+    catch(Exception ex)
+    {
+    }
+
+    Response.Redirect("/Cars/Index");
+}

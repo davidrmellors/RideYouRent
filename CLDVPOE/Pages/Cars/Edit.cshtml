@@ -1,0 +1,124 @@
+﻿@page
+@model CLDVPOE.Pages.Cars.EditModel
+@{
+    Layout = "~/Pages/Shared/_dashboard.cshtml";
+}
+
+<div class="p-5">
+    <br>
+    <h2>Edit Car</h2>
+
+    @if (Model.errorMessage.Length > 0)
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>@Model.errorMessage</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <form method="post">
+
+        <input type="hidden" class="form-control" name="carID" value="@Model.cars.carID" />
+
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">makeID</label>
+            <div class="col-sm-6">
+                <select class="form-select" name="makeID">
+                    @foreach (var item in IndexModel.listCarMake)
+                    {
+                        <option value="@item.makeID">@item.makeID</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">bodyTypeID</label>
+            <div class="col-sm-6">
+                <select class="form-select" name="bodyTypeID">
+                    @foreach (var item in IndexModel.listCarBodyType)
+                    {
+                        <option value="@item.bodyTypeID">@item.bodyTypeID</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">carModel</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="carModel" value="@Model.cars.carModel" />
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">kilometersTravelled</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="kilometersTravelled" value="@Model.cars.kilometersTravelled" />
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">serviceKilometers</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="serviceKilometers" value="@Model.cars.serviceKilometers" />
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">available</label>
+            <div class="col-sm-6">
+                <select class="form-select" id="true-false" name="available">
+                    @{
+                        if (Model.cars.available.Equals("True"))
+                        {
+                            <option value="True" selected>True</option>
+                            <option value="False">False</option>
+                        }
+                        else
+                        {
+                            <option value="True">True</option>
+                            <option value="False" selected>False</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">serviceDue</label>
+            <div class="col-sm-6">
+                @*<input type="text" class="form-control" name="serviceDue" value="@Model.cars.serviceDue" />*@
+                <select class="form-select" id="true-false" name="serviceDue">
+                    @{
+                        if(Model.cars.serviceDue.Equals("True"))
+                        {
+                            <option value="True" selected>True</option>
+                            <option value="False">False</option>
+                        }
+                        else
+                        {
+                            <option value="True">True</option>
+                            <option value="False" selected>False</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+
+        @if (Model.successMessage.Length > 0)
+        {
+            <div class="row mb-3">
+                <div class="col-sm-9">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>@Model.successMessage</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="row mb-3">
+            <div class="offset-sm-3 col-sm-3 d-grid">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="col-sm-3 d-grid">
+                <a class="btn btn-outline-primary" href="/Cars/Index" role="button">Cancel</a>
+            </div>
+        </div>
+    </form>
+</div>
