@@ -1,0 +1,10 @@
+2023/12/24 22:08:26	This log contains information about the import schema operation into project 'RideYouRentDB' on computer 'DESKTOP-MHGGE25' by user 'David'.
+2023/12/24 22:08:27	Deserializing model
+2023/12/24 22:08:27	Resolving model
+2023/12/24 22:08:27	Visiting imported model for types
+2023/12/24 22:08:27	Scanning project for duplicate elements
+2023/12/24 22:08:27	Finished duplicate element processing
+2023/12/24 22:08:27	Processing extra files
+2023/12/24 22:08:27	Finished importing Data-tier Application file.
+2023/12/24 22:08:27	A summary of the import was saved to the following location: C:\Users\David\source\repos\CLDVPOE\RideYouRentDB\Import Schema Logs\RideYouRentDB_20231224080826.log
+2023/12/24 22:08:27	Click Finish to continue...

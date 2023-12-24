@@ -13,7 +13,8 @@ namespace CLDVPOE.Pages.Cars
         {
             try
             {
-                string connectionString = "Data Source=dbs-vc-cldv6221-st10241466.database.windows.net;Initial Catalog=db_vc_cldv6221_st10241466;Persist Security Info=True;User ID=st10241466;Password=Monster@$123";
+                string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+                string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={baseDir}rideyourent-dbs_Primary.mdf;Trusted_Connection=True;";
                 listCars.Clear();
                 listCarMake.Clear();
                 listCarBodyType.Clear();

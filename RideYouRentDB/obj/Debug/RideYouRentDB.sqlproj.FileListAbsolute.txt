@@ -1,0 +1,10 @@
+C:\Users\David\source\repos\CLDVPOE\RideYouRentDB\bin\Debug\RideYouRentDB.dacpac
+C:\Users\David\source\repos\CLDVPOE\RideYouRentDB\bin\Debug\RideYouRentDB.dll
+C:\Users\David\source\repos\CLDVPOE\RideYouRentDB\bin\Debug\RideYouRentDB.pdb
+C:\Users\David\source\repos\CLDVPOE\RideYouRentDB\obj\Debug\RideYouRentDB.sqlproj.AssemblyReference.cache
+C:\Users\David\source\repos\CLDVPOE\RideYouRentDB\obj\Debug\RideYouRentDB.dll
+C:\Users\David\source\repos\CLDVPOE\RideYouRentDB\obj\Debug\RideYouRentDB.pdb
+C:\Users\David\source\repos\CLDVPOE\RideYouRentDB\obj\Debug\Model.xml
+C:\Users\David\source\repos\CLDVPOE\RideYouRentDB\obj\Debug\refactor.xml
+C:\Users\David\source\repos\CLDVPOE\RideYouRentDB\obj\Debug\postdeploy.sql
+C:\Users\David\source\repos\CLDVPOE\RideYouRentDB\obj\Debug\predeploy.sql

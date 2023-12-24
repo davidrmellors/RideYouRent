@@ -1,0 +1,29 @@
+﻿** Highlights
+     Tables that will be recreated with data migrated
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Car] (Table)
+       [dbo].[CarBodyType] (Table)
+       [dbo].[CarMake] (Table)
+       [dbo].[CarRental] (Table)
+       [dbo].[CarReturn] (Table)
+       [dbo].[Driver] (Table)
+       [dbo].[Inspector] (Table)
+       [dbo].[FK_bodyTypeID] (Foreign Key)
+       [dbo].[FK_makeID] (Foreign Key)
+       [dbo].[FK_carID] (Foreign Key)
+       [dbo].[FK_driverID] (Foreign Key)
+       [dbo].[FK_inspectorID] (Foreign Key)
+       [dbo].[FK_rentalID] (Foreign Key)
+       [dbo].[FK_ReturnDriverID] (Foreign Key)
+       [dbo].[FK_ReturnInspectorID] (Foreign Key)
+
+** Supporting actions
